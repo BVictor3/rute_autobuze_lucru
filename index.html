@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Autobuze Flex</title>
+<meta name="theme-color" content="#0b6bcb">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Autobuze">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <div id="map"></div>
+  <aside class="side">
+    <div class="head">
+      <div>
+        <h1>Autobuze Flex</h1>
+        <div class="muted">Traseu, stații și ore</div>
+      </div>
+      <button id="installBtn">Instalează</button>
+    </div>
+    <div class="demo">Date de exemplu: stațiile intermediare și orele sunt <b>inventate</b>, „CEC BANK” e aproximativ.</div>
+    <div class="offline" id="offline">Fără internet: se văd doar bucățile de hartă deja încărcate.</div>
+
+    <select id="route"></select>
+    <div class="toggle">
+      <button data-dir="morning">☀️ Dimineața → Flex</button>
+      <button data-dir="evening">🌙 Seara ← Flex</button>
+    </div>
+
+    <div class="card" id="next"></div>
+
+    <div class="card">
+      <ul class="stops" id="stops"></ul>
+      <div class="muted" style="margin-top:6px">Atinge o stație ca s-o vezi pe hartă. Dublu-click o face „stația mea”.</div>
+    </div>
+
+    <div class="clock">
+      <span>Simulează ora:</span>
+      <input type="time" id="simTime">
+      <button id="nowBtn">Acum</button>
+    </div>
+  </aside>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
